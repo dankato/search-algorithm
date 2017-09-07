@@ -151,18 +151,14 @@ class BinaryTree {
 
         while (queue.length) {
             const node = queue.shift();
-            // console.log("push: ", this.value);
             values.push(node.value);
             if (node.left) {
-                // console.log("push left: ", this.value);
                 queue.push(node.left);
             }
             if (node.right) {
-                // console.log("push right: ", this.value);
                 queue.push(node.right);
             }
         }
-        // console.log("push");
         return values;
     }
 }
